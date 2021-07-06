@@ -1,0 +1,18 @@
+{:deps
+ {net.mikera/core.matrix {:mvn/version "0.62.0"}
+  net.mikera/vectorz-clj {:mvn/version "0.48.0"}
+  cljfmt/cljfmt {:mvn/version "0.8.0"}
+  org.clojure/core.match {:mvn/version "1.0.0"}
+  org.clojure/math.numeric-tower {:mvn/version "0.0.4"}}
+
+ :aliases
+ {:cider-clj {:extra-deps {org.clojure/clojure {:mvn/version "1.10.1"}
+                           cider/cider-nrepl {:mvn/version "0.26.0"}}
+              :main-opts ["-m" "nrepl.cmdline" "--middleware" "[cider.nrepl/cider-middleware]"]}
+
+  :cider-cljs {:extra-deps {org.clojure/clojure {:mvn/version "1.10.1"}
+                            org.clojure/clojurescript {:mvn/version "1.10.339"}
+                            cider/cider-nrepl {:mvn/version "0.26.0"}
+                            cider/piggieback {:mvn/version "0.5.2"}}
+               :main-opts ["-m" "nrepl.cmdline" "--middleware"
+                           "[cider.nrepl/cider-middleware,cider.piggieback/wrap-cljs-repl]"]}}}
